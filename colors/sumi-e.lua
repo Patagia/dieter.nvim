@@ -1,0 +1,1 @@
+require("sumi-e").colorscheme()
