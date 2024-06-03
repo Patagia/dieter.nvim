@@ -53,6 +53,8 @@ local theme = {
 	LineNr = { fg = c.dimmed, italic = true },
 	IndentLine = { fg = "#ffffff" },
 	IndentLineCurrent = { fg = c.dimmed },
+	TreesitterContext = { reverse = true },
+	TreesitterContextLineNumber = { bg = c.dimmed, reverse = true, italic = true },
 }
 
 vim.cmd("hi clear")
