@@ -51,6 +51,8 @@ local theme = {
 	-- UI Elements
 	CursorLine = { bg = c.highlight_subtle },
 	LineNr = { fg = c.dimmed, italic = true },
+	IndentLine = { fg = "#ffffff" },
+	IndentLineCurrent = { fg = c.dimmed },
 }
 
 vim.cmd("hi clear")
