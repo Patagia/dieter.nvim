@@ -1,1 +1,2 @@
-require("sumi-e").colorscheme()
+package.loaded["sumi-e"] = nil
+require("sumi-e")
