@@ -1,11 +1,3 @@
-vim.g.colors_name = "sumi-e"
-
-vim.cmd("hi clear")
-
-if vim.fn.exists("syntax_on") == 1 then
-	vim.cmd("syntax reset")
-end
-
 local colors = {
 	light = {
 		foreground = "#202020",
@@ -61,6 +53,14 @@ local theme = {
 	LineNr = { fg = c.dimmed, italic = true },
 }
 
+vim.cmd("hi clear")
+
+if vim.fn.exists("syntax_on") == 1 then
+	vim.cmd("syntax reset")
+end
+
 for group, hl in pairs(theme) do
 	vim.api.nvim_set_hl(0, group, hl)
 end
+
+vim.g.colors_name = "sumi-e"
