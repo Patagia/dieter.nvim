@@ -77,4 +77,4 @@ for group, hl in pairs(theme) do
 	vim.api.nvim_set_hl(0, group, hl)
 end
 
-vim.g.colors_name = "sumi-e"
+vim.g.colors_name = "dieter"

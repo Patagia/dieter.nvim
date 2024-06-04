@@ -1,1 +1,3 @@
-# 🖌️ Sumi-e -- A minimalist theme for Neovim
+# 🔴 Dieter - A minimalist theme for Neovim
+
+Less but better.
