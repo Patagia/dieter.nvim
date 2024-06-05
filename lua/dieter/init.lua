@@ -1,3 +1,5 @@
+local hsl = require("dieter.hsl").hslToHex
+
 local colors = {
 	light = {
 		background = "#fefeff",
@@ -12,6 +14,14 @@ local colors = {
 		diff_add = "#00ff77",
 		diff_change = "#47eae0",
 		diff_delete = "#ff0038",
+
+		add = hsl(84, 75, 67),
+		add_quarter = hsl(84, 80, 95),
+		change = hsl(41, 50, 75),
+		change_quarter = hsl(224, 100, 85),
+		delete = hsl(350, 100, 40),
+		delete_quarter = hsl(350, 100, 85),
+
 		highlight_subtle = "#f0f0f0",
 		dimmed = "#cccccc",
 	},
@@ -46,6 +56,16 @@ local theme = {
 	Special = { link = "Normal" },
 	String = { link = "Normal" },
 	Type = { link = "Normal" },
+
+	DiffAdd = { fg = c.add, bg = c.add_quarter },
+	GitSignsAdd = { fg = c.add, bg = c.background },
+	GitSignsAddNr = { link = "DiffAdd" },
+	DiffChange = { fg = c.change, bg = c.change_quarter },
+	GitSignsChange = { fg = c.change, bg = c.background },
+	GitSignsChangeNr = { link = "DiffChange" },
+	DiffDelete = { fg = c.delete, bg = c.delete_quarter },
+	GitSignsDelete = { fg = c.delete, bg = c.background },
+	GitSignsDeleteNr = { link = "DiffDelete" },
 
 	-- Treesitter
 	["@function"] = { link = "Normal" },
