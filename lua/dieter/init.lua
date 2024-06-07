@@ -29,20 +29,24 @@ local colors = {
 		dialog_bg = hsl(224, 5, 92),
 		selection = hsl(270, 75, 92),
 		highlight_subtle = hsl(0, 0, 94),
+		highlight_intense = hsl(42, 100, 30),
 		dimmed = hsl(0, 0, 80),
+		dimmed_subtle = hsl(0, 0, 20),
 	},
 
 	dark = {
 		background = hsl(216, 28, 7),
 		foreground = hsl(0, 0, 80),
 		dimmed = hsl(0, 0, 35),
+		dimmed_subtle = hsl(0, 0, 70),
 		highlight_subtle = hsl(0, 0, 6),
+		highlight_intense = hsl(58, 100, 60),
 
-		string = hsl(66, 50, 73),
-		comment = hsl(230, 50, 75),
-		comment_error = hsl(2, 85, 75),
+		string = hsl(96, 50, 70),
+		comment = hsl(220, 50, 60),
+		comment_error = hsl(2, 85, 50),
 
-		diagnostic_error = hsl(347, 100, 50),
+		diagnostic_error = hsl(353, 100, 45),
 		diagnostic_warning = hsl(30, 100, 50),
 		diagnostic_info = hsl(176, 80, 60),
 		diagnostic_hint = hsl(176, 80, 60),
@@ -52,14 +56,14 @@ local colors = {
 		popup_info_bg = hsl(112, 95, 7),
 		popup_hint_bg = hsl(112, 95, 7),
 
-		add = hsl(84, 50, 80),
-		add_quarter = hsl(84, 80, 95),
-		change = hsl(41, 80, 80),
-		change_quarter = hsl(224, 100, 85),
+		add = hsl(100, 100, 12),
+		add_quarter = hsl(84, 80, 15),
+		change = hsl(41, 100, 15),
+		change_quarter = hsl(224, 100, 15),
 		delete = hsl(350, 100, 40),
-		delete_quarter = hsl(350, 100, 85),
+		delete_quarter = hsl(350, 100, 15),
 
-		dialog_bg = hsl(224, 5, 92),
+		dialog_bg = hsl(224, 5, 12),
 
 		selection = hsl(270, 50, 33),
 	},
@@ -101,23 +105,27 @@ local theme = {
 	["@function"] = { link = "NormalNC" },
 	["@special"] = { link = "NormalNC" },
 	["@variable"] = { link = "NormalNC" },
+	["@lsp.type.variable"] = { fg = c.dimmed_subtle },
 
 	-- UI Elements
 	CursorLine = { bg = c.highlight_subtle },
 
 	DiagnosticError = { fg = c.diagnostic_error, italic = true },
-	DiagnosticUnderlineError = { fg = c.diagnostic_error, undercurl = true },
 	DiagnosticFloatingError = { fg = c.diagnostic_error, bg = c.popup_error_bg },
 	DiagnosticFloatingWarn = { fg = c.diagnostic_warning, bg = c.popup_warning_bg },
 	DiagnosticFloatingInfo = { fg = c.diagnostic_info, bg = c.popup_info_bg },
 	DiagnosticFloatingHint = { fg = c.diagnostic_hint, bg = c.popup_hint_bg },
+	DiagnosticUnderlineError = { fg = c.diagnostic_error, undercurl = true },
+	DiagnosticUnderlineWarn = { fg = c.diagnostic_warn, undercurl = true },
+	DiagnosticUnderlineInfo = { fg = c.diagnostic_info, undercurl = true },
+	DiagnosticUnderlinehint = { fg = c.diagnostic_hint, undercurl = true },
 
 	DiagnosticSignError = { fg = c.diagnostic_error },
 	DiagnosticSignHint = { fg = c.diagnostic_hint },
 	DiagnosticSignInfo = { fg = c.diagnostic_info },
 	DiagnosticSignWarn = { fg = c.diagnostic_warning },
 	LineNr = { fg = c.dimmed, italic = true },
-	IndentLine = { fg = "#ffffff" },
+	IndentLine = { fg = c.background },
 	IndentLineCurrent = { fg = c.dimmed },
 	TreesitterContext = { reverse = true },
 	TreesitterContextLineNumber = { bg = c.dimmed, reverse = true, italic = true },
@@ -134,6 +142,7 @@ local theme = {
 	TelescopeResultsComment = { fg = c.foreground, italic = true },
 
 	Visual = { bg = c.selection },
+	LspReferenceText = { fg = c.highlight_intense, undercurl = true },
 }
 
 vim.cmd("hi clear")
