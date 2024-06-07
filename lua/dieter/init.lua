@@ -2,14 +2,10 @@ local hsl = require("dieter.hsl").hslToHex
 
 local colors = {
 	light = {
-		background = "#fefeff",
-		foreground = "#202020",
-		intense = "#000000",
-		primary = "#ff0000",
-		secondary = "#00ff00",
+		background = hsl(240, 100, 100),
+		foreground = hsl(0, 0, 13),
 
 		string = hsl(96, 50, 33),
-
 		comment = hsl(230, 66, 40),
 		comment_error = hsl(2, 85, 40),
 
@@ -17,10 +13,6 @@ local colors = {
 		diagnostic_warning = hsl(30, 100, 50),
 		diagnostic_info = hsl(145, 80, 30),
 		diagnostic_hint = hsl(145, 80, 30),
-
-		diff_add = "#00ff77",
-		diff_change = "#47eae0",
-		diff_delete = "#ff0038",
 
 		popup_error_bg = hsl(0, 90, 99),
 		popup_warning_bg = hsl(27, 90, 99),
@@ -35,28 +27,41 @@ local colors = {
 		delete_quarter = hsl(350, 100, 85),
 
 		dialog_bg = hsl(224, 5, 92),
-
 		selection = hsl(270, 75, 92),
-
-		highlight_subtle = "#f0f0f0",
-		dimmed = "#cccccc",
+		highlight_subtle = hsl(0, 0, 94),
+		dimmed = hsl(0, 0, 80),
 	},
 
 	dark = {
-		background = "#000000",
-		foreground = "#b2b2b2",
-		intense = "#e7e7e7",
-		primary = "#00ff00",
-		secondary = "#555555",
-		diagnostic_error = "#ff0038",
-		diagnostic_warning = "#ff7700",
-		diagnostic_info = "#47eae0",
-		diagnostic_hint = "#47eae0",
-		diff_add = "#00ff77",
-		diff_change = "#47eae0",
-		diff_delete = "#ff0038",
-		dimmed = "#666666",
-		highlight_subtle = "#101010",
+		background = hsl(216, 28, 7),
+		foreground = hsl(0, 0, 80),
+		dimmed = hsl(0, 0, 35),
+		highlight_subtle = hsl(0, 0, 6),
+
+		string = hsl(66, 50, 73),
+		comment = hsl(230, 50, 75),
+		comment_error = hsl(2, 85, 75),
+
+		diagnostic_error = hsl(347, 100, 50),
+		diagnostic_warning = hsl(30, 100, 50),
+		diagnostic_info = hsl(176, 80, 60),
+		diagnostic_hint = hsl(176, 80, 60),
+
+		popup_error_bg = hsl(0, 95, 7),
+		popup_warning_bg = hsl(27, 95, 7),
+		popup_info_bg = hsl(112, 95, 7),
+		popup_hint_bg = hsl(112, 95, 7),
+
+		add = hsl(84, 50, 80),
+		add_quarter = hsl(84, 80, 95),
+		change = hsl(41, 80, 80),
+		change_quarter = hsl(224, 100, 85),
+		delete = hsl(350, 100, 40),
+		delete_quarter = hsl(350, 100, 85),
+
+		dialog_bg = hsl(224, 5, 92),
+
+		selection = hsl(270, 50, 33),
 	},
 }
 
