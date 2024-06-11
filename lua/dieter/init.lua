@@ -63,7 +63,7 @@ local colors = {
 		delete = hsl(350, 100, 40),
 		delete_quarter = hsl(350, 100, 15),
 
-		dialog_bg = hsl(224, 5, 12),
+		dialog_bg = hsl(216, 25, 20),
 
 		selection = hsl(270, 50, 33),
 	},
