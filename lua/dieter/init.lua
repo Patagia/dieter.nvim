@@ -136,6 +136,8 @@ local theme = {
 	NormalFloat = { bg = c.dialog_bg },
 	Title = { fg = c.foreground, bold = true },
 
+	NoiceMini = { fg = c.foreground, italic = true },
+
 	TelescopeNormal = { fg = c.foreground, bg = c.background },
 	TelescopeBorder = { bold = true },
 	TelescopeSelection = { reverse = true },
